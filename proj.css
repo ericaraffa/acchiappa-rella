@@ -1,0 +1,295 @@
+/*Layout*/
+*{
+  box-sizing: border-box;
+}
+
+header{
+  background-color: #222;
+  padding: 1% 2%;
+  padding-top: 2%;
+  margin: -8px;
+  letter-spacing: 0.3em;
+  border-bottom: solid;
+  border-bottom-color: white;
+  border-bottom-width: thin;
+}
+body{
+  /*background-color: #1c1a24;*/
+  background: url('bkgnd4.png');
+  font-family: 'Special Elite', cursive;
+  font-weight: 500;
+}
+
+section{
+  width: 70%;
+  text-align: justify;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: large;
+  line-height: 150%;
+}
+
+.testo {
+  color: white;
+  text-align: center;
+  line-height: 200%;
+  font-size: large;
+}
+
+.popupMessage{
+  background: url(paper.jpg);
+  background-repeat: no-repeat;
+  border: solid black;
+}
+
+#load-match-table tbody tr:hover{
+  background-color: rgba(128, 128, 128, 0.644);
+  cursor: pointer;
+  
+}
+
+
+#load-match-table, #load-match-table td, #load-match-table th{
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: 10% 0%;
+  padding: 3%;
+}
+
+#display-if-empty{
+  display: table-row;
+}
+
+#gameBoard {
+  display:flex;
+  padding:0.5%;
+  margin: 3% 5%;
+  background-color: #f1f2f6;
+  border: 3px solid #222;
+  border-radius: 12px;
+  font-family: 'Special Elite', cursive;
+
+}
+#map-wrapper {
+  position: relative;
+  border-width: 3px 0px;
+  border-style: solid;
+  border-color: #222;
+  width: 40%;
+  padding-top: 43.88%;
+  flex: 1;
+  background-image: url(mappaFix.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+#map {
+  position: absolute;
+  width: 100%;
+  display: block;
+  float: left; /*prova*/
+}
+area {
+  display: block;
+  background-color: red;
+}
+
+/*Menu*/
+.sideMenuStyle{
+  flex:0; 
+  background-color: #222;
+  min-width:25%;
+  padding: 1%;
+  margin: 0;
+}
+#menuSx{
+  border-radius: 10px 0 0 10px;
+}
+#menuDx{
+  border-radius: 0 10px 10px 0;
+}
+
+/*Side menu contents*/
+.sideMenu{
+  list-style-type:none;
+  background-color: #f1f2f6;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+.sideMenuTitle{
+  font-size: 163%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  color:white;
+  letter-spacing: 0.2em;
+}
+
+/*Da eliminare*/
+.path-btn-container .btn {
+  background-color: #ff8600;
+  color: white;
+  padding: 5% 10%;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin: 1% 1%;
+  opacity: 0.8;
+}
+
+.sideMenuStyle #set-paths{
+  display: flex;
+}
+
+#display-path{
+    max-width: 100%;
+    max-height: 15%;
+    max-height: 4.5em;
+    overflow-y: scroll;
+  }
+
+/*UP nav-bar*/
+#menuUp{
+  background-color: #222;
+  margin:-8px;
+  margin-top: -16px;
+}
+li a{
+  display: block;
+  color: #f1f2f6;
+  text-align: center;
+  padding: 8px 25px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #ff8600;
+}
+
+.sideMenu li {
+  margin: 1em 0;
+}
+ul.navBar{ /*Solo tag ul*/
+  overflow: hidden;
+  list-style-type:none;
+  padding: 0% 1%;
+}
+
+.dropDown{
+  display: none;
+  position: absolute;
+  background-color:rgba(97, 91, 89, 0.85);
+  z-index: 3;
+}
+
+.char-popup{
+  display: none;
+
+}
+
+/* Form */
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: absolute;
+  top:30%;
+  left: 40%;
+  /*border: 2px solid #f1f2f6;*/
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px 24px;  
+}
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 5%;
+  margin: 1% 0 8% 0;
+  border: none;
+  background: #f1f1f1;
+  border: 1px solid #fa860193;
+}
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #ff8600;
+  color: white;
+  padding: 15px 30px;
+  border: 1px solid gray;
+  box-shadow: #716f73 3px 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 4%;
+  opacity: 0.8;
+}
+/*Background color to the cancel button */
+.form-container  .cancel {
+  background-color: grey;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+/*Elements*/
+#wrapper{
+  position: absolute;
+}
+.path{
+  width : 100%;
+  height : 100%;
+  fill: white;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+}
+.ball{
+    width: 4.5%;
+    height: 5%;
+    stroke: #272727; 
+    stroke-width: 8%; 
+    fill: white;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+}
+.ball text{
+  stroke: #000000; 
+  stroke-width: 2%; 
+  fill: #000000;
+  display: inline-block;
+  position: absolute;
+  font-size: 90%;
+}
+
+.possi-ball {
+  fill: rgb(144, 151, 160);
+}
+
+.mr_R-ball{
+  fill: red;
+
+}
+
+.polizia-ball{
+  fill: green;
+}
+
+.polizia-ball text{
+  stroke: white;
+  fill: white;
+}
+
+.temp-ball{
+  fill: yellow;
+}
